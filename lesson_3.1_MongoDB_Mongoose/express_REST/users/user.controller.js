@@ -31,7 +31,7 @@ async function createUser(req, res) {
 async function updateUser(req, res) {
 	const { id } = req.params;
 
-	const userUpdate = await User.findOneAndUpdate({_id:id}, {$set: {...req.body}})
+	const userUpdate = await User.findOneAndUpdate({_id:id}, {$set: {...req.body}}, { new: true })
 
 	
 	res.send(userUpdate);
