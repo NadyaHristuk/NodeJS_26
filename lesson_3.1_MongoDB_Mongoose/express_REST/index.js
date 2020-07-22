@@ -16,7 +16,7 @@ app.use('/api/users/', userRouter);
 app.use((err, req, res, next) => {
 	const { message, status } = err;
 
-	res.status(status || 500).send(message);
+	res.status(status).send(message);
 });
 
 mongoose.connect(process.env.MONGO_URL,  {

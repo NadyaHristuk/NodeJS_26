@@ -7,12 +7,11 @@ async function getUsers(req, res) {
 	res.send(userList);
 }
 
-async function getUser(req, res, next) {
-	try {
+async function getUser(req, res) {
 	const { id } = req.params;
 
     // const requestedUser = await User.find({ _id: id });
-    const requestedUser = await User.findById(id).catch((e) => { console.error(e.message) });
+    const requestedUser = await User.findById(id);
 
 	if (!requestedUser) {
 		const err = new Error(`User with id ${id} does not exist`);
@@ -21,9 +20,6 @@ async function getUser(req, res, next) {
 	}
 
 	res.send(requestedUser);
-	}catch(err){
-		next(err)
-	}
 }
 
 async function createUser(req, res) {
