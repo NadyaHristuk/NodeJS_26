@@ -17,7 +17,10 @@ app.use(express.json());
 
 app.use('/auth/', usersRouter);
 app.use('/api/contacts', contactsRouter);
+<<<<<<< HEAD
 app.post('users/current/', () =>{})
+=======
+>>>>>>> 29ade477560d8f9bfca3d31b1ca3c53211cd49ad
 
 app.use((err, req, res, next) => {
 	const { message, status } = err;

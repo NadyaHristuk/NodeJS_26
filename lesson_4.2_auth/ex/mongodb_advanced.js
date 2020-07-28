@@ -10,6 +10,7 @@ async function main() {
     name: { type: String, required: true },
     age: { type: Number, required: true },
   });
+
   const User = mongoose.model("UserErrr", userSchema);
 
   // for (let i = 0; i < 15; i++) {
@@ -23,6 +24,7 @@ async function main() {
   // console.log(await User.find({ age: { $in: [11, 6] } }));
   console.log(
     await User.find({ $or: [{ age: 4 }, { name: /ple1/ }] }).skip(3).limit(4)
+
   );
 }
 main();

@@ -53,7 +53,12 @@ async function main() {
           as: "favouriteFilms",
         },
       },
-      
+      {
+        $project: {
+          favouriteFilms: '$favouriteFilms'
+        }
+      }
+
     ])
   );
 }
