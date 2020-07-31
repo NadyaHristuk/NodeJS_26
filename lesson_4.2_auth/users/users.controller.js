@@ -36,11 +36,8 @@ const loginUser = async(req, res) => {
         const {password, email} =  req.body;
 
         const user = await User.findOne({email});
-<<<<<<< HEAD
-        // console.log(user.password)
-=======
         console.log(user.password)
->>>>>>> 29ade477560d8f9bfca3d31b1ca3c53211cd49ad
+
         
       
         if(!user){
