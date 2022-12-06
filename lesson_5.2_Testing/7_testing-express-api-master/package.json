@@ -17,10 +17,10 @@
   "license": "ISC",
   "homepage": "",
   "dependencies": {
-    "express": "^4.11.2"
+    "express": "^4.18.2"
   },
   "devDependencies": {
-    "supertest": "^0.15.0",
+    "supertest": "^6.3.2",
     "tap-spec": "^2.2.1",
     "tape": "^3.5.0"
   }
